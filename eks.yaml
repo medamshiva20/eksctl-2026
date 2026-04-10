@@ -20,7 +20,7 @@ kind: ClusterConfig
 metadata:
   name: roboshop
   region: us-east-1
-  version: "1.29"
+  version: "1.34"
 
 managedNodeGroups:
   - name: spot
@@ -30,7 +30,7 @@ managedNodeGroups:
       - t3a.medium
       - t3a.large
     
-    spot: true   # correct way instead of "spot: true"
+    capacityType: SPOT   # correct way instead of "spot: true"
 
     desiredCapacity: 2
     minSize: 1
