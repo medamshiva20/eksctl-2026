@@ -30,7 +30,7 @@ managedNodeGroups:
       - t3a.medium
       - t3a.large
     
-    capacityType: SPOT   # correct way instead of "spot: true"
+    spot: true   # correct way instead of "spot: true"
 
     desiredCapacity: 2
     minSize: 1
