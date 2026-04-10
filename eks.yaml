@@ -29,8 +29,8 @@ managedNodeGroups:
       - t3.large
       - t3a.medium
       - t3a.large
-
-    capacityType: SPOT
+    
+    spot: true
 
     desiredCapacity: 2
     minSize: 1
