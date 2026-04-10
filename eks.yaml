@@ -20,7 +20,7 @@ kind: ClusterConfig
 metadata:
   name: roboshop
   region: us-east-1
-  version: "1.34"
+  version: "1.34"   # supported version
 
 managedNodeGroups:
   - name: spot
@@ -29,8 +29,8 @@ managedNodeGroups:
       - t3.large
       - t3a.medium
       - t3a.large
-    
-    spot: true   # correct way instead of "spot: true"
+
+    capacityType: SPOT
 
     desiredCapacity: 2
     minSize: 1
@@ -39,7 +39,7 @@ managedNodeGroups:
     volumeSize: 20
     volumeType: gp3
 
-    amiFamily: AmazonLinux2
+    amiFamily: AmazonLinux2023  
 
     privateNetworking: true
 
